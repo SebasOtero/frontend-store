@@ -1,0 +1,304 @@
+:root {
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincial: "Staatliches", sans-serif;
+}
+
+/* Globales comienzo */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincial);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/* Globales fin */
+
+/* Header comienzo */
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo {
+    margin: 3rem 0;
+}
+
+/* Header fin */
+
+/* Nav comienzo */
+
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navegacion-enlace {
+    font-family: var(--fuentePrincial);
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.navegacion-enlace_activo,
+.navegacion-enlace:hover {
+    color: var(--secundario)
+}
+
+/* Nav fin */
+
+/* GRID Comienzo */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width:768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* GRID Fin */
+
+/* Main Comienzo */
+
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.producto-imagen {
+    width: 100%;
+}
+
+.producto-nombre {
+    font-size: 4rem;
+}
+
+.producto-precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.producto-nombre,
+.producto-precio {
+    font-family: var(--fuentePrincial);
+    margin: 1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+
+.grafico-camisas {
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grafico-node {
+    grid-row: 8 / 9;
+    background-image: url(../img/grafico2.jpg);
+}
+
+@media (min-width: 768px) {
+    .grafico-node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/* Main Fin */
+
+/* Nosotros comienzo */
+
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.nosotros-imagen {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .nosotros-imagen {
+        grid-column: 2 / 3;
+    }
+}
+
+/* Bloques */
+
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque {
+    text-align: center;
+}
+
+.bloque-titulo {
+    margin: 0;
+}
+
+.bloque-imagen {
+    width: 100%;
+}
+
+/* Nosotros fin*/
+
+/* Producto venta comienzo */
+
+.camisa {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    column-gap: 2rem;
+    justify-items: center
+}
+
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: (2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    gap: 2rem;
+}
+
+.camisa-imagen{
+    display: flex;
+    
+}
+
+.formulario-campo {
+    border-color: var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid;
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+
+.formulario-submit {
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincial);
+    padding: 2rem;
+}
+
+.formulario-submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
+
+/* Producto venta fin */
+
+
+
+
+
+/* Footer comienzo */
+
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-textoo {
+    font-family: var(--fuentePrincial);
+    text-align: center;
+}
+
+/* Footer fin */
